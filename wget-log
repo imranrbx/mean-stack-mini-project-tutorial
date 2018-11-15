@@ -1,0 +1,16 @@
+--2018-11-13 00:02:24--  http://allin1global.com/?pipes=cron
+Resolving allin1global.com (allin1global.com)... 67.205.38.200
+Connecting to allin1global.com (allin1global.com)|67.205.38.200|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: http://www.allin1global.com/?pipes=cron [following]
+--2018-11-13 00:02:25--  http://www.allin1global.com/?pipes=cron
+Resolving www.allin1global.com (www.allin1global.com)... 67.205.38.200
+Reusing existing connection to allin1global.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 208747 (204K) [text/html]
+Saving to: '/dev/null'
+
+/dev/null                  0%[                                 ]       0  --.-KB/s               /dev/null                  7%[=>                               ]  15.00K  53.9KB/s               /dev/null                 21%[======>                          ]  43.36K  77.8KB/s               /dev/null                 35%[==========>                      ]  71.72K  78.2KB/s               /dev/null                 39%[===========>                     ]  80.23K  71.6KB/s               /dev/null                 81%[=========================>       ] 165.30K   115KB/s               /dev/null                 91%[=============================>   ] 186.57K   107KB/s               /dev/null                100%[================================>] 203.85K   115KB/s    in 1.8s    
+
+2018-11-13 00:02:28 (115 KB/s) - '/dev/null' saved [208747/208747]
+
