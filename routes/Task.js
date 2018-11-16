@@ -21,11 +21,20 @@ router.get("/:id", async (req, res) => {
   }
 });
 router.post("/", (req, res) => {
-  const tasks = new Task({
-    title: req.body.title,
-  });
-  if (tasks.save()) res.json({ message: "Task Successfully Added" });
-  else res.json({ message: "Error saving Task" });
+  try {
+    const tasks = new Task({
+      title: req.body.title,
+    });
+    tasks.save(function(err, doc) {
+      if (err) {
+        res.json({ message: err.message });
+      } else {
+        res.json({ message: "Record Added Successfully!" });
+      }
+    });
+  } catch (e) {
+    res.json({ message: e.message });
+  }
 });
 
 router.put("/:id", async (req, res) => {
