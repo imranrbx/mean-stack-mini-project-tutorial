@@ -4,7 +4,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {
   MatPaginator,
   MatTableDataSource,
-  MatSnackBar
+  MatSnackBar,
+  MatSort
 } from '@angular/material';
 @Component({
   selector: 'app-tasks',
@@ -23,6 +24,7 @@ export class TasksComponent implements OnInit {
   dataSource: MatTableDataSource<TasksModel>;
   @ViewChild(MatPaginator)
   paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
   message: any;
   constructor(
     private tasksService: TasksService,
@@ -38,6 +40,7 @@ export class TasksComponent implements OnInit {
         return;
       }
       this.dataSource = new MatTableDataSource<TasksModel>(tasks);
+      this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
     });
   }
@@ -64,6 +67,13 @@ export class TasksComponent implements OnInit {
     console.log('Test: ' + e);
     if (e === true) {
       this.AllTasksList();
+    }
+  }
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
     }
   }
 }

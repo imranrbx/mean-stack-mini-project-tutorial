@@ -2,10 +2,11 @@
 <div mat-dialog-content>
   <p>Add Title of your Task</p>
   <mat-form-field>
-    <input matInput [(ngModel)]="data.title" placeholder="Enter Your Title" required cdkFocusInitial>
+    <input matInput [(ngModel)]="data.title" name="title" #title="ngModel" placeholder="Enter Your Title" required
+      minlength="5" cdkFocusInitial>
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button (click)="onAddTask(data)">Add Task</button>
+  <button mat-button (click)="onAddTask(data)" [disabled]="title.invalid">Add Task</button>
 </div>

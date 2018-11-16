@@ -13,7 +13,8 @@ import {
   MatButtonModule,
   MatInputModule,
   MatIconModule,
-  MatDialogModule
+  MatDialogModule,
+  MatSortModule
 } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { TasksService } from './Services/tasks.service';
@@ -40,6 +41,7 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatInputModule,
     MatIconModule,
+    MatSortModule,
     FormsModule,
     HttpClientModule
   ],
