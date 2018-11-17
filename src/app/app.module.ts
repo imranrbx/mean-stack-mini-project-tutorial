@@ -17,7 +17,6 @@ import {
   MatSortModule
 } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
-import { TasksService } from './Services/tasks.service';
 import { TaskAddComponent, TaskOpenDialog } from './tasks/task-add.component';
 import { FormsModule } from '@angular/forms';
 @NgModule({
@@ -45,7 +44,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     HttpClientModule
   ],
-  providers: [TasksService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
